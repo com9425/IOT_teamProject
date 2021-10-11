@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/LinearLayout"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <FrameLayout
+        android:id="@+id/frMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/LL1F"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ToggleButton
+                                android:id="@+id/tb1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textOff="주차장상태보기"
+                                android:textOn="주차장상태끄기"
+                                android:textSize="20dp" />
+
+                            <ToggleButton
+                                android:id="@+id/tb2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textOff="현관도어상태보기"
+                                android:textOn="현관도어상태끄기"
+                                android:textSize="20dp" />
+
+                            <ToggleButton
+                                android:id="@+id/tb3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textOff="가스현황보기 "
+                                android:textOn="가스현황끄기"
+                                android:textSize="20dp" />
+
+                            <ToggleButton
+                                android:id="@+id/tb4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textOff="출입시도기록보기 "
+                                android:textOn="출입시도기록끄기"
+                                android:textSize="20dp" />
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                </LinearLayout>
+                    <Button
+                        android:id="@+id/btnFirst"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="정보 새로받아오기"
+                        android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/tvFirstFloorResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1층 정보:~에 업데이트됨"
+                    android:layout_gravity="center"
+                    android:textColor="#990aa0"
+                    android:textSize="20dp" />
+                <LinearLayout
+                    android:id="@+id/LL1"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent"
+                    >
+                    <LinearLayout
+                        android:id="@+id/tv1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        >
+                        <TextView
+                            android:id="@+id/tvInfo1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="30dp"
+                            android:text="1층주차장정보:"
+                            android:visibility="visible" />
+                        <TextView
+                            android:id="@+id/tvUpdate1"
+                           android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="~에 업데이트됨"
+                            android:layout_gravity="center"
+                            android:textColor="#990000"
+                            android:textSize="30dp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/tv2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        >
+                        <TextView
+                            android:id="@+id/tvInfo2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="30dp"
+                            android:text="현관도어상태:"
+                            android:visibility="visible" />
+                        <TextView
+                            android:id="@+id/tvUpdate2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="~에 업데이트됨"
+                            android:layout_gravity="center"
+                            android:textColor="#990000"
+                            android:textSize="30dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/tv3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:textSize="20dp"
+                        >
+                        <TextView
+                            android:id="@+id/tvInfo3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="30dp"
+                            android:text="1층가스:"
+                            android:visibility="visible" />
+                        <TextView
+                            android:id="@+id/tvUpdate3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="~에 업데이트됨"
+                            android:layout_gravity="center"
+                            android:textColor="#990000"
+                            android:textSize="30dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/tv4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textSize="30dp"
+                        android:orientation="vertical"
+                        >
+                        <TextView
+                            android:id="@+id/tvInfo4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="30dp"
+                            android:text="출입기록:" />
+                        <TextView
+                            android:id="@+id/tvUpdate4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="~에 업데이트됨"
+                            android:layout_gravity="center"
+                            android:textColor="#990000"
+                            android:textSize="30dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LLMain"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+
+
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    >
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal"
+
+                                    android:layout_weight="3">
+                                    <ImageView
+                                        android:id="@+id/ivHomeResult"
+                                        android:layout_width="200dp"
+                                        android:layout_height="200dp"
+                                        android:src="@drawable/nomal"
+                                        android:layout_gravity="center"/>
+                                    <LinearLayout
+                                        android:background="#aaaaaa"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical"
+                                        android:layout_weight="1"
+                                        >
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal">
+                                            <TextView
+                                                android:text="My House"
+                                                android:textColor="#00aabb"
+                                                android:textAlignment="center"
+                                                android:gravity="center"
+                                                android:textSize="20dp"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1"/>
+                                            <ImageView
+                                                android:id="@+id/ivConnect"
+                                                android:layout_weight="1"
+                                                android:layout_width="100dp"
+                                                android:layout_height="60dp"
+                                                android:src="@drawable/bluetooth_grayicon" />
+                                        </LinearLayout>
+                                        <TextView
+                                            android:id="@+id/tvHomeResult"
+                                            android:layout_width="match_parent"
+                                            android:textSize="15dp"
+                                            android:textColor="#3366ff"
+                                            android:text="집상태가 표시됩니다."
+                                            android:gravity="center"
+                                            android:layout_height="wrap_content"/>
+                                        <TextView
+                                            android:id="@+id/tvinfo5"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:text="실내온도 : "
+                                            android:textColor="#FBFBFB"
+                                            android:textSize="15dp" />
+                                        <TextView
+                                            android:id="@+id/tvUpdate8"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:text="~에 업데이트됩니다."
+
+                                            android:textSize="15dp" />
+                                        <TextView
+                                            android:id="@+id/tvinfo6"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="실내습도 :"
+                                            android:textColor="#FBFBFB"
+                                            android:textSize="15dp"
+                                            android:gravity="center"/>
+                                        <TextView
+                                            android:id="@+id/tvUpdate9"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:text="~에 업데이트됩니다."
+                                            android:textSize="15dp" />
+                                        <TextView
+                                            android:id="@+id/tvinfo7"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="실내미세먼지 :"
+                                            android:textColor="#FBFBFB"
+                                            android:textSize="15dp"
+                                            android:gravity="center"/>
+                                        <TextView
+                                            android:id="@+id/tvUpdate10"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:text="~에 업데이트됩니다"
+
+                                            android:textSize="15dp" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_weight="2">
+                                    <LinearLayout
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_weight="4">
+
+                                            <ImageView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:background="@drawable/gra"
+                                                android:layout_weight="1"
+                                                android:src="@drawable/temper" />
+
+                                            <ImageView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1"
+                                                android:background="@drawable/gra"
+                                                android:src="@drawable/humidity"/>
+
+                                            <ImageView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1"
+                                                android:background="@drawable/gra"
+                                                android:src="@drawable/dust"/>
+
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="5"
+                                        android:gravity="center"
+                                        android:background="#E8185C">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="오늘날씨"
+                                            android:textSize="25dp"
+                                            android:textColor="#ffffff"
+                                            android:layout_gravity="center"
+                                            />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="horizontal"
+
+                                        android:layout_weight="2">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            >
+                                            <ImageView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:src="@drawable/weather1"/>
+                                        </LinearLayout>
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="vertical"
+                                            android:gravity="center"
+
+                                            android:layout_weight="1">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:textColor="#FBFBFB"
+                                                android:textSize="20dp"
+                                                android:text="미세먼지 :"
+                                                />
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:textColor="#FBFBFB"
+                                                android:textSize="20dp"
+                                                android:text="강수량 :"/>
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:textColor="#FBFBFB"
+                                                android:textSize="20dp"
+                                                android:text="풍량 :"/>
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </FrameLayout>
+                    </FrameLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:layout_weight="9">
+                        <LinearLayout
+                            android:id="@+id/line1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+
+                            android:background="@drawable/layout_border"
+                            android:layout_weight="1"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="1층"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/line2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            >
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="2층"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/LL2F"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+
+                        <ToggleButton
+                            android:id="@+id/tb5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textOff="RGB1보기"
+                            android:textOn="RGB1끄기"
+                            android:textSize="20dp" />
+
+                        <ToggleButton
+                            android:id="@+id/tb6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textOff="RGB2보기"
+                            android:layout_weight="1"
+                            android:textOn="RGB2끄기"
+                            android:textSize="20dp" />
+
+                        <ToggleButton
+                            android:id="@+id/tb7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textOff="RGB3보기"
+                            android:layout_weight="1"
+                            android:textOn="RGB3끄기"
+                            android:textSize="20dp" />
+
+                    </LinearLayout>
+            </LinearLayout>
+            <Button
+                android:id="@+id/btnSecond"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="정보 새로받아오기"
+                android:textSize="20dp" />
+            <TextView
+                android:id="@+id/tvSecondFloorResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2층 정보:~에 업데이트됨"
+                android:textAlignment="center"
+                android:textColor="#11aaff"
+                android:textSize="20dp" />
+            <LinearLayout
+                android:id="@+id/LL2"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="match_parent"
+                >
+                <LinearLayout
+                    android:id="@+id/tv5"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        >
+                        <ImageView
+                            android:id="@+id/iv1"
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/light"
+                            >
+                        </ImageView>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            >
+                            <SeekBar
+                                android:id="@+id/sb1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4"></SeekBar>
+                            <SeekBar
+                                android:id="@+id/sb2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4"></SeekBar>
+                            <SeekBar
+                                android:id="@+id/sb3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4"></SeekBar>
+
+
+                            <TextView
+                                android:id="@+id/tvUpdate5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="17dp"
+                                android:gravity="center"
+                                android:layout_weight="2"
+                                android:text="RGB1 ~에 업데이트됨"
+                                >
+                            </TextView>
+                            <Button
+                                android:id="@+id/btn1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="값전달"
+                                >
+                            </Button>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/tv6"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        >
+                        <ImageView
+                            android:id="@+id/iv2"
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/light"
+                            >
+                        </ImageView>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            >
+                            <SeekBar
+                                android:id="@+id/sb4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4"></SeekBar>
+                            <SeekBar
+                                android:id="@+id/sb5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4"></SeekBar>
+                            <SeekBar
+                                android:id="@+id/sb6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4"></SeekBar>
+
+
+                            <TextView
+                                android:id="@+id/tvUpdate6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="17dp"
+                                android:gravity="center"
+                                android:layout_weight="2"
+                                android:text="RGB2 ~에 업데이트됨"
+                                >
+                            </TextView>
+                            <Button
+                                android:id="@+id/btn2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="값전달"
+                                >
+                            </Button>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/tv7"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        >
+                        <ImageView
+                            android:id="@+id/iv3"
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/light"
+                            >
+                        </ImageView>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            >
+                            <SeekBar
+                                android:id="@+id/sb7"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4"></SeekBar>
+                            <SeekBar
+                                android:id="@+id/sb8"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4"></SeekBar>
+                            <SeekBar
+                                android:id="@+id/sb9"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4"></SeekBar>
+
+
+                            <TextView
+                                android:id="@+id/tvUpdate7"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="17dp"
+                                android:gravity="center"
+                                android:layout_weight="2"
+                                android:text="RGB3 ~에 업데이트됨"
+                                >
+                            </TextView>
+                            <Button
+                                android:id="@+id/btn3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="값전달"
+                                >
+                            </Button>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>
